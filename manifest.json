@@ -3,6 +3,9 @@
   "name": "YT ads goodbye",
   "version": "1.0",
   "description": "",
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'"
+  },
   "content_scripts": [
     {
       "js": ["script.js"],

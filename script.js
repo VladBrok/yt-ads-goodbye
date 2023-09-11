@@ -1,6 +1,3 @@
-let ogVolume = 1;
-let pbRate = 1;
-
 setInterval(function () {
   if (
     document.getElementsByClassName("video-stream html5-main-video")[0] !==
@@ -10,9 +7,6 @@ setInterval(function () {
     let vid = document.getElementsByClassName(
       "video-stream html5-main-video"
     )[0];
-    if (ad == undefined) {
-      pbRate = vid.playbackRate;
-    }
     let closeAble = document.getElementsByClassName(
       "ytp-ad-overlay-close-button"
     );
@@ -78,4 +72,4 @@ setInterval(function () {
       }
     }
   }
-}, 1000);
+}, 500);

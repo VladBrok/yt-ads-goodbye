@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "YT ads goodbye",
+  "version": "1.0",
+  "description": "",
+  "content_scripts": [
+    {
+      "js": ["script.js"],
+      "matches": ["https://www.youtube.com/*", "https://m.youtube.com/*"]
+    }
+  ]
+}

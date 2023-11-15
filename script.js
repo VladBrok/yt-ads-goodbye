@@ -10,9 +10,11 @@ setInterval(function () {
     let closeAble = document.getElementsByClassName(
       "ytp-ad-overlay-close-button"
     );
+
     for (let i = 0; i < closeAble.length; i++) {
       closeAble[i].click();
     }
+
     if (
       document.getElementsByClassName(
         "style-scope ytd-watch-next-secondary-results-renderer sparkles-light-cta GoogleActiveViewElement"
@@ -23,6 +25,7 @@ setInterval(function () {
       )[0];
       sideAd.style.display = "none";
     }
+
     if (
       document.getElementsByClassName(
         "style-scope ytd-item-section-renderer sparkles-light-cta"
@@ -33,6 +36,7 @@ setInterval(function () {
       )[0];
       sideAd_.style.display = "none";
     }
+
     if (
       document.getElementsByClassName(
         "ytp-ad-text ytp-ad-skip-button-text"
@@ -43,6 +47,7 @@ setInterval(function () {
       )[0];
       skipBtn.click();
     }
+
     if (
       document.getElementsByClassName("ytp-ad-message-container")[0] !==
       undefined
@@ -52,6 +57,7 @@ setInterval(function () {
       )[0];
       incomingAd.style.display = "none";
     }
+
     if (
       document.getElementsByClassName(
         "style-scope ytd-companion-slot-renderer"
@@ -61,11 +67,15 @@ setInterval(function () {
         .getElementsByClassName("style-scope ytd-companion-slot-renderer")[0]
         .remove();
     }
+
     if (
       ad !== undefined &&
       ad.children.length > 0 &&
-      document.getElementsByClassName("ytp-ad-text ytp-ad-preview-text")[0] !==
-        undefined
+      (document.getElementsByClassName("ytp-ad-text ytp-ad-preview-text")[0] !==
+        undefined ||
+        document.getElementsByClassName(
+          "ytp-ad-text ytp-ad-preview-text-modern"
+        )[0] !== undefined)
     ) {
       {
         vid.playbackRate = 16;

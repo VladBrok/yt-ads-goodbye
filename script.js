@@ -75,7 +75,8 @@ setInterval(function () {
         undefined ||
         document.getElementsByClassName(
           "ytp-ad-text ytp-ad-preview-text-modern"
-        )[0] !== undefined)
+        )[0] !== undefined ||
+        document.getElementsByClassName("ytp-ad-text")[0] !== undefined)
     ) {
       {
         vid.playbackRate = 16;

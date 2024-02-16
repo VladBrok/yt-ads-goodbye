@@ -40,12 +40,14 @@ setInterval(function () {
     if (
       document.getElementsByClassName(
         "ytp-ad-text ytp-ad-skip-button-text"
-      )[0] !== undefined
+      )[0] !== undefined ||
+      document.getElementsByClassName("ytp-skip-ad-button")[0] !== undefined
     ) {
-      let skipBtn = document.getElementsByClassName(
-        "ytp-ad-text ytp-ad-skip-button-text"
-      )[0];
-      skipBtn.click();
+      let skipBtn =
+        document.getElementsByClassName(
+          "ytp-ad-text ytp-ad-skip-button-text"
+        )[0] || document.getElementsByClassName("ytp-skip-ad-button")[0];
+      skipBtn?.click();
     }
 
     if (
